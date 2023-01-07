@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".SignUpActivity">
+
+    <EditText
+        android:id="@+id/edtUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Your Email"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtUsername"
+        android:hint="Enter Your Password" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtPassword"
+        android:text="Submit" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentBottom="true"
+
+
+        android:background="@drawable/bg_round_corner"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select your gender:"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+            <RadioGroup
+                android:id="@+id/genderRG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/rbMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:checked="true"
+                    android:layout_margin="10dp"
+                    android:text="Male"/>
+                <RadioButton
+                    android:id="@+id/rbFeMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:layout_margin="10dp"
+                    android:text="Female"/>
+                <RadioButton
+                    android:id="@+id/rbOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:layout_margin="10dp"
+                    android:text="Other"/>
+            </RadioGroup>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select your hobby:"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+            <CheckBox
+                android:id="@+id/Readingbook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+
+                android:text="Reading books"/>
+            <CheckBox
+                android:id="@+id/Garedning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+
+
+                android:text="Gardening"/>
+        <CheckBox
+            android:id="@+id/Art"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+
+            android:text="Art"/>
+        <CheckBox
+            android:id="@+id/coding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="Coding"/>
+        <CheckBox
+            android:id="@+id/Traveling"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="Traveling"/>
+    </LinearLayout>
+
+<!--    <ImageView-->
+<!--        android:id="@+id/demiImg"-->
+<!--        android:layout_width="291dp"-->
+<!--        android:layout_height="203dp"-->
+
+<!--        android:src="@drawable/agresion"-->
+<!--        />-->
+<!--<EditText-->
+<!--    android:id="@+id/edt"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="20dp"-->
+<!--    android:hint="Enter you name"-->
+<!--    android:drawableEnd="@drawable/ic_baseline_call_missed_24"-->
+<!--    android:drawablePadding="5dp"-->
+<!--    android:textColorHint="@color/purple_500"-->
+
+<!--    android:layout_margin="10dp"-->
+<!--    android:layout_below="@+id/demiImg"-->
+<!--    />-->
+<!--<ImageButton-->
+<!--    android:layout_below="@+id/edt"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:background="@color/Mouve"-->
+<!--    android:src="@drawable/ic_baseline_call_missed_24"/>-->
+</RelativeLayout>
