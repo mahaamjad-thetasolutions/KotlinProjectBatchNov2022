@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         val username=intent.getStringExtra("USERNAME")
         val password=intent.getStringExtra("PASSWORD")
 
-        Toast.makeText(this,username, Toast.LENGTH_LONG).show()
+        Toast.makeText(this,password, Toast.LENGTH_LONG).show()
         btntwo.text=username
     }
 
