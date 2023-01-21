@@ -11,10 +11,16 @@
         android:layout_height="wrap_content"
         android:inputType="textUri"
         android:hint="Enter Your URL"/>
+    <include
+        android:layout_above="@id/btnView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/doctor_item_view"/>
 <Button
     android:id="@+id/btnView"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_centerInParent="true"
     android:text="View"/>
+
 </RelativeLayout>
