@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.thetapractice.KotlinProjectBatchNov2022.Helper.KotlinNovSharedPrefs
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,7 +16,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun moveToNextActivity() {
-
+        KotlinNovSharedPrefs(this).saveUserNaneInSP("Theta Admin")
         startActivity(Intent(this,LifeCycleActivity::class.java))
     finish()
     }

@@ -161,7 +161,7 @@
         android:layout_marginTop="10dp"
         android:background="@color/purple_200"
         android:padding="3dp"
-        android:text="Theta2"
+        android:text="Logout"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold" />

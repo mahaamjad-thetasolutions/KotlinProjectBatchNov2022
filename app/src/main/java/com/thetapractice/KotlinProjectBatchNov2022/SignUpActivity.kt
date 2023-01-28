@@ -10,6 +10,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.core.view.isVisible
+import com.thetapractice.KotlinProjectBatchNov2022.Model.Patient
+import com.thetapractice.KotlinProjectBatchNov2022.RoomDatabase.AppDatabase
 
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import java.util.regex.Pattern
@@ -26,83 +28,85 @@ class SignUpActivity : AppCompatActivity() {
         btnSubmit.setOnClickListener {
              userEmail= username.text.toString()
              user0Password=edtPassword.text.toString()
-            getGenderValue()
-            getHobbies()
+            val Patient=Patient(0,userEmail,"09876543223",20,"Diabetes",true,"Khadim Ali Road")
+            AppDatabase.getDatabase(this).patientdao().savePatient(Patient)
+//            getGenderValue()
+//            getHobbies()
             //validateUserDetails()
         }
 
-        genderRG.setOnCheckedChangeListener { radioGroup, checkedid ->
-           when(checkedid){
-               R.id.rbMale->
-               {
-                   userGender="Male"
-                   Toast.makeText(this,userGender,Toast.LENGTH_LONG).show()
-//                   coding.isVisible=true
-//                   Traveling.isVisible=true
-//                   Garedning.isVisible=false
-//                   Readingbook.isVisible=false
-//                   Art.isVisible=false
-               }
-               R.id.rbFeMale->{
-                   userGender="Female"
-                   Toast.makeText(this,userGender,Toast.LENGTH_LONG).show()
-//                   coding.isVisible=false
-//                   Traveling.isVisible=false
-//                   Garedning.isVisible=true
-//                   Readingbook.isVisible=true
-//                   Art.isVisible=true
-               }
-               R.id.rbOther->{
-                   userGender="Other"
-                   Toast.makeText(this,userGender,Toast.LENGTH_LONG).show()
-//                   coding.isVisible=true
-//                   Traveling.isVisible=true
-//                   Garedning.isVisible=true
-//                   Readingbook.isVisible=true
-//                   Art.isVisible=true
-               }
-           }
-        }
+//        genderRG.setOnCheckedChangeListener { radioGroup, checkedid ->
+//           when(checkedid){
+//               R.id.rbMale->
+//               {
+//                   userGender="Male"
+//                   Toast.makeText(this,userGender,Toast.LENGTH_LONG).show()
+////                   coding.isVisible=true
+////                   Traveling.isVisible=true
+////                   Garedning.isVisible=false
+////                   Readingbook.isVisible=false
+////                   Art.isVisible=false
+//               }
+//               R.id.rbFeMale->{
+//                   userGender="Female"
+//                   Toast.makeText(this,userGender,Toast.LENGTH_LONG).show()
+////                   coding.isVisible=false
+////                   Traveling.isVisible=false
+////                   Garedning.isVisible=true
+////                   Readingbook.isVisible=true
+////                   Art.isVisible=true
+//               }
+//               R.id.rbOther->{
+//                   userGender="Other"
+//                   Toast.makeText(this,userGender,Toast.LENGTH_LONG).show()
+////                   coding.isVisible=true
+////                   Traveling.isVisible=true
+////                   Garedning.isVisible=true
+////                   Readingbook.isVisible=true
+////                   Art.isVisible=true
+//               }
+//           }
+//        }
     }
 
-    private fun getHobbies() {
-        userHobbies=""
-        if(Art.isChecked)
-        {
-            userHobbies="Art"
-        }
-        if(Garedning.isChecked)
-        {
-            userHobbies=userHobbies+", Gardening"
-        }
-        if(Traveling.isChecked)
-        {
-            userHobbies=userHobbies+", Traveling"
-        }
-        if(Readingbook.isChecked)
-        {
-            userHobbies=userHobbies+", Reading Books"
-        }
-        if(coding.isChecked)
-        {
-            userHobbies=userHobbies+", Coding"
-        }
-        Toast.makeText(this, userHobbies,Toast.LENGTH_LONG).show()
-    }
-
-    private fun getGenderValue() {
-        if(rbMale.isChecked)
-        {
-            userGender="Male"
-        }
-        else if(rbFeMale.isChecked)
-        {
-            userGender="Female"
-        }
-        else {
-            userGender="Other"
-        }
-    }
+//    private fun getHobbies() {
+//        userHobbies=""
+//        if(Art.isChecked)
+//        {
+//            userHobbies="Art"
+//        }
+//        if(Garedning.isChecked)
+//        {
+//            userHobbies=userHobbies+", Gardening"
+//        }
+//        if(Traveling.isChecked)
+//        {
+//            userHobbies=userHobbies+", Traveling"
+//        }
+//        if(Readingbook.isChecked)
+//        {
+//            userHobbies=userHobbies+", Reading Books"
+//        }
+//        if(coding.isChecked)
+//        {
+//            userHobbies=userHobbies+", Coding"
+//        }
+//        Toast.makeText(this, userHobbies,Toast.LENGTH_LONG).show()
+//    }
+//
+//    private fun getGenderValue() {
+//        if(rbMale.isChecked)
+//        {
+//            userGender="Male"
+//        }
+//        else if(rbFeMale.isChecked)
+//        {
+//            userGender="Female"
+//        }
+//        else {
+//            userGender="Other"
+//        }
+//    }
 
     private fun validateUserDetails() {
         if(validateEmail()&&validatePassword())

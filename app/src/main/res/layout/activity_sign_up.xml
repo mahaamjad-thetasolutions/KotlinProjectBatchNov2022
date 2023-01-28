@@ -27,96 +27,96 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/edtPassword"
         android:text="Submit" />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_alignParentBottom="true"
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="500dp"-->
+<!--        android:layout_alignParentBottom="true"-->
 
 
-        android:background="@drawable/bg_round_corner"
-        android:orientation="vertical"
-        android:padding="20dp">
+<!--        android:background="@drawable/bg_round_corner"-->
+<!--        android:orientation="vertical"-->
+<!--        android:padding="20dp">-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Select your gender:"
-            android:textColor="@color/black"
-            android:textSize="25sp" />
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Select your gender:"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="25sp" />-->
 
-            <RadioGroup
-                android:id="@+id/genderRG"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <RadioButton
-                    android:id="@+id/rbMale"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="25sp"
-                    android:checked="true"
-                    android:layout_margin="10dp"
-                    android:text="Male"/>
-                <RadioButton
-                    android:id="@+id/rbFeMale"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="25sp"
-                    android:layout_margin="10dp"
-                    android:text="Female"/>
-                <RadioButton
-                    android:id="@+id/rbOther"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="25sp"
-                    android:layout_margin="10dp"
-                    android:text="Other"/>
-            </RadioGroup>
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Select your hobby:"
-            android:textColor="@color/black"
-            android:textSize="25sp" />
-
-            <CheckBox
-                android:id="@+id/Readingbook"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="25sp"
-
-                android:text="Reading books"/>
-            <CheckBox
-                android:id="@+id/Garedning"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="25sp"
+<!--            <RadioGroup-->
+<!--                android:id="@+id/genderRG"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal">-->
+<!--                <RadioButton-->
+<!--                    android:id="@+id/rbMale"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textSize="25sp"-->
+<!--                    android:checked="true"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:text="Male"/>-->
+<!--                <RadioButton-->
+<!--                    android:id="@+id/rbFeMale"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textSize="25sp"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:text="Female"/>-->
+<!--                <RadioButton-->
+<!--                    android:id="@+id/rbOther"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textSize="25sp"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:text="Other"/>-->
+<!--            </RadioGroup>-->
 
 
-                android:text="Gardening"/>
-        <CheckBox
-            android:id="@+id/Art"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="25sp"
 
-            android:text="Art"/>
-        <CheckBox
-            android:id="@+id/coding"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="25sp"
-            android:text="Coding"/>
-        <CheckBox
-            android:id="@+id/Traveling"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="25sp"
-            android:text="Traveling"/>
-    </LinearLayout>
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Select your hobby:"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="25sp" />-->
+
+<!--            <CheckBox-->
+<!--                android:id="@+id/Readingbook"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="25sp"-->
+
+<!--                android:text="Reading books"/>-->
+<!--            <CheckBox-->
+<!--                android:id="@+id/Garedning"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="25sp"-->
+
+
+<!--                android:text="Gardening"/>-->
+<!--        <CheckBox-->
+<!--            android:id="@+id/Art"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="25sp"-->
+
+<!--            android:text="Art"/>-->
+<!--        <CheckBox-->
+<!--            android:id="@+id/coding"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="25sp"-->
+<!--            android:text="Coding"/>-->
+<!--        <CheckBox-->
+<!--            android:id="@+id/Traveling"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="25sp"-->
+<!--            android:text="Traveling"/>-->
+<!--    </LinearLayout>-->
 
 <!--    <ImageView-->
 <!--        android:id="@+id/demiImg"-->
