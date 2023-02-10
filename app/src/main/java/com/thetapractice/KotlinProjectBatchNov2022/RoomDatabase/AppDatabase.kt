@@ -12,7 +12,6 @@ import com.thetapractice.KotlinProjectBatchNov2022.Model.Patient
 abstract class AppDatabase(): RoomDatabase() {
 
     abstract fun patientdao():PatientDAO
-
     companion object{
         fun getDatabase(context: Context):AppDatabase{
             var HMSdatabase: AppDatabase? =null
