@@ -13,4 +13,5 @@
         android:layout_height="wrap_content"
         tools:listitem="@layout/doctor_item_view"
         tools:itemCount="5"/>
+
 </RelativeLayout>

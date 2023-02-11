@@ -6,9 +6,13 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.thetapractice.KotlinProjectBatchNov2022.Helper.KotlinNovSharedPrefs
+import com.thetapractice.KotlinProjectBatchNov2022.Model.SaveStudentResponse
+import com.thetapractice.KotlinProjectBatchNov2022.Model.StudentDeleteResponse
 import com.thetapractice.KotlinProjectBatchNov2022.Model.StudentListResponse
 import com.thetapractice.KotlinProjectBatchNov2022.Network.ThetaService
 import kotlinx.android.synthetic.main.activity_main.*
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -27,7 +31,40 @@ class MainActivity : AppCompatActivity() {
 //            KotlinNovSharedPrefs(this).clearSharedPrefs()
 //            startActivity(Intent(this , LifeCycleActivity::class.java))
 //        }
-        getStudentListFromAPI()
+        saveStudentInDB()
+    }
+    private fun saveStudentInDB() {
+        var student=getStudent()
+        var call=ThetaService.getRetrofitObject()?.SaveStudentInDB(student)
+
+
+        call?.enqueue(object: Callback<SaveStudentResponse>{
+            override fun onResponse(
+                call: Call<SaveStudentResponse> ,
+                response: Response<SaveStudentResponse>
+            ) {
+                Toast.makeText(baseContext ,response.body()?.message , Toast.LENGTH_LONG).show()
+            }
+
+            override fun onFailure(call: Call<SaveStudentResponse> , t: Throwable) {
+                Toast.makeText(baseContext ,t.localizedMessage , Toast.LENGTH_LONG).show()
+            }
+
+
+        })
+    }
+
+    private fun getStudent(): RequestBody {
+
+        var student=MultipartBody.Builder().setType(MultipartBody.FORM)
+            .addFormDataPart("Name","Ali")
+            .addFormDataPart("Department","Electronics")
+            .addFormDataPart("Cgpa","2.3")
+            .addFormDataPart("Email","ali@gmail.com")
+            .addFormDataPart("Username","Ali12345")
+            .addFormDataPart("Password","123456")
+            .addFormDataPart("IsActive","1").build()
+        return student
     }
 
     private fun getStudentListFromAPI() {
@@ -46,6 +83,25 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(baseContext ,t.localizedMessage , Toast.LENGTH_LONG).show()
 
             }
+
+        })
+    }
+    private fun deleteStudentFromListFromAPI() {
+        var call=ThetaService.getRetrofitObject()?.deleteStudentFromList(12)
+
+
+        call?.enqueue(object: Callback<StudentDeleteResponse>{
+            override fun onResponse(
+                call: Call<StudentDeleteResponse> ,
+                response: Response<StudentDeleteResponse>
+            ) {
+                Toast.makeText(baseContext ,response.body()?.message , Toast.LENGTH_LONG).show()
+            }
+
+            override fun onFailure(call: Call<StudentDeleteResponse> , t: Throwable) {
+                Toast.makeText(baseContext ,t.message , Toast.LENGTH_LONG).show()
+            }
+
 
         })
     }

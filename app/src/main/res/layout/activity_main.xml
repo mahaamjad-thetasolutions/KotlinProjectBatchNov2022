@@ -9,7 +9,11 @@
 
         android:layout_width="match_parent"
         >
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
 
+        />
 <!--        <TextView-->
 <!--            android:id="@+id/txtOne"-->
 <!--            android:layout_width="wrap_content"-->
