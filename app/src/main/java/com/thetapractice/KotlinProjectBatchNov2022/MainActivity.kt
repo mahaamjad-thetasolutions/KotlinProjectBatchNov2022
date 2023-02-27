@@ -4,7 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.messaging.FirebaseMessaging
 import com.thetapractice.KotlinProjectBatchNov2022.Helper.KotlinNovSharedPrefs
 import com.thetapractice.KotlinProjectBatchNov2022.Model.SaveStudentResponse
 import com.thetapractice.KotlinProjectBatchNov2022.Model.StudentDeleteResponse
@@ -22,16 +24,30 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //val email=intent.getStringExtra("EMAIL")
-        val username=intent.getStringExtra("USERNAME")
-        val password=intent.getStringExtra("PASSWORD")
 
-        Toast.makeText(this , KotlinNovSharedPrefs(this).getUserNaneFromSP() , Toast.LENGTH_LONG).show()
-//        btntwo.setOnClickListener {
-//            KotlinNovSharedPrefs(this).clearSharedPrefs()
-//            startActivity(Intent(this , LifeCycleActivity::class.java))
-//        }
-        saveStudentInDB()
+         FirebaseMessaging.getInstance().token.addOnCompleteListener { task->
+            if(task.isSuccessful)
+            {
+                Toast.makeText(this , task.result.toString(), Toast.LENGTH_LONG).show()
+            }
+            else{
+                Toast.makeText(this , "Token not generated", Toast.LENGTH_LONG).show()
+            }
+        }
+        var dialog=AlertDialog.Builder(this)
+        dialog.setTitle("Confirmation!")
+        dialog.setMessage("Are you sure you wnat to Exit?")
+        dialog.setIcon(R.drawable.ic_baseline_account_box_24)
+        dialog.setPositiveButton("Sure"){dialog,which->
+            finish()
+        }
+        dialog.setNegativeButton("No"){dialog, which->
+            dialog.cancel()
+        }
+        dialog.create()
+        dialog.show()
+
+
     }
     private fun saveStudentInDB() {
         var student=getStudent()
