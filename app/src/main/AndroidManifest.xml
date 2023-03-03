@@ -11,9 +11,17 @@
         android:theme="@style/Theme.KotlinProjectBatchNov2022"
         tools:targetApi="31">
         <activity
-            android:name=".WebviewActivity"
+            android:name=".FirebaseCRUDActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity
+            android:name=".WebviewActivity"
+            android:exported="true"/>
         <activity
             android:name=".StudentList.StudentListActivity"
             android:exported="true" />
@@ -65,11 +73,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

@@ -22,14 +22,20 @@
         <entry key="..\:/Users/Dell/StudioProjects/KotlinProjectBatchNov2022/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.1" />
         <entry key="..\:/Users/Dell/StudioProjects/KotlinProjectBatchNov2022/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1" />
         <entry key="..\:/Users/Dell/StudioProjects/KotlinProjectBatchNov2022/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.1" />
-        <entry key="..\:/Users/Dell/StudioProjects/KotlinProjectBatchNov2022/app/src/main/res/layout/activity_doctor_list_view.xml" value="0.22" />
+        <entry key="..\:/Users/Dell/StudioProjects/KotlinProjectBatchNov2022/app/src/main/res/layout/activity_constraint_layout.xml" value="0.2" />
+        <entry key="..\:/Users/Dell/StudioProjects/KotlinProjectBatchNov2022/app/src/main/res/layout/activity_doctor_list_view.xml" value="0.25" />
+        <entry key="..\:/Users/Dell/StudioProjects/KotlinProjectBatchNov2022/app/src/main/res/layout/activity_firebase_crudactivity.xml" value="0.1718683197947841" />
         <entry key="..\:/Users/Dell/StudioProjects/KotlinProjectBatchNov2022/app/src/main/res/layout/activity_fragment_practice.xml" value="0.17089755213055305" />
         <entry key="..\:/Users/Dell/StudioProjects/KotlinProjectBatchNov2022/app/src/main/res/layout/activity_implicit_intent.xml" value="0.17798913043478262" />
-        <entry key="..\:/Users/Dell/StudioProjects/KotlinProjectBatchNov2022/app/src/main/res/layout/activity_main.xml" value="0.10182370820668693" />
+        <entry key="..\:/Users/Dell/StudioProjects/KotlinProjectBatchNov2022/app/src/main/res/layout/activity_life_cycle.xml" value="0.17798913043478262" />
+        <entry key="..\:/Users/Dell/StudioProjects/KotlinProjectBatchNov2022/app/src/main/res/layout/activity_main.xml" value="0.15" />
         <entry key="..\:/Users/Dell/StudioProjects/KotlinProjectBatchNov2022/app/src/main/res/layout/activity_maps.xml" value="0.17798913043478262" />
-        <entry key="..\:/Users/Dell/StudioProjects/KotlinProjectBatchNov2022/app/src/main/res/layout/activity_sign_up.xml" value="0.1" />
+        <entry key="..\:/Users/Dell/StudioProjects/KotlinProjectBatchNov2022/app/src/main/res/layout/activity_sign_up.xml" value="0.22" />
+        <entry key="..\:/Users/Dell/StudioProjects/KotlinProjectBatchNov2022/app/src/main/res/layout/activity_splash.xml" value="0.1718683197947841" />
+        <entry key="..\:/Users/Dell/StudioProjects/KotlinProjectBatchNov2022/app/src/main/res/layout/activity_student_list.xml" value="0.1718683197947841" />
         <entry key="..\:/Users/Dell/StudioProjects/KotlinProjectBatchNov2022/app/src/main/res/layout/activity_theta_bottom_nav.xml" value="0.17798913043478262" />
-        <entry key="..\:/Users/Dell/StudioProjects/KotlinProjectBatchNov2022/app/src/main/res/layout/doctor_item_view.xml" value="0.25" />
+        <entry key="..\:/Users/Dell/StudioProjects/KotlinProjectBatchNov2022/app/src/main/res/layout/activity_webview.xml" value="0.1718683197947841" />
+        <entry key="..\:/Users/Dell/StudioProjects/KotlinProjectBatchNov2022/app/src/main/res/layout/doctor_item_view.xml" value="0.23735408560311283" />
         <entry key="..\:/Users/Dell/StudioProjects/KotlinProjectBatchNov2022/app/src/main/res/layout/fragment_account.xml" value="0.17798913043478262" />
         <entry key="..\:/Users/Dell/StudioProjects/KotlinProjectBatchNov2022/app/src/main/res/layout/fragment_dashboard.xml" value="0.1" />
         <entry key="..\:/Users/Dell/StudioProjects/KotlinProjectBatchNov2022/app/src/main/res/layout/fragment_home.xml" value="0.1" />

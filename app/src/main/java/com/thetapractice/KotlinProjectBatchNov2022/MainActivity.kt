@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this , "Token not generated", Toast.LENGTH_LONG).show()
             }
         }
+
         var dialog=AlertDialog.Builder(this)
         dialog.setTitle("Confirmation!")
         dialog.setMessage("Are you sure you wnat to Exit?")
